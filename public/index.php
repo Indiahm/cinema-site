@@ -21,8 +21,10 @@ require SRC . 'routes/admin.php';
 
 $match = $router->match();
 
+
 require SRC . 'includes/functions.php';
 if (!empty($match['target'])) {
+	checkAdmin($match);
 	$_GET = array_merge($_GET, $match['params']);
 	require SRC . 'models/' . $match['target'] . 'Model.php';
 	require SRC . 'controllers/' . $match['target'] . 'Controller.php';

@@ -13,7 +13,7 @@ $router->map( 'GET|POST', $admin . '/utilisateurs/editer', 'users/admin_edit', '
 $router->map( 'GET', $admin . '/utilisateurs/supprimer/[uuid:id]', 'users/admin_delete', 'deleteUser'); // 6
 
 // Movies
-$router->map( 'GET', $admin . '/films', '', '');
+$router->map( 'GET|POST', $admin . '/films', '/movies/admin_listMovies', 'listMovies');
 $router->map( 'GET|POST', $admin . '/films/editer/[i:id]', 'movies/admin_editMovies', '');
 $router->map( 'GET|POST', $admin . '/films/editer', 'movies/admin_editMovies', '');
 $router->map( 'GET', $admin . '/films/supprimer/[i:id]', '', '');
