@@ -24,7 +24,7 @@
 						</li>
 					</ul>
 					<div class="navbar-text">
-						<a href="" class="btn btn-danger">Déconnexion</a>
+						<a href="<?= $router->generate('logout'); ?>" class="btn btn-danger">Déconnexion</a>
 					</div>
 				</div>
 			</div>

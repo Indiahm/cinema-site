@@ -12,7 +12,16 @@ $default-font: 'Arial', sans-serif;
 
 
 // Imports
-// @import '_reset';
+@import 'reset';
+@import 'mixins.scss';
+@import 'default';
+@import 'header';
+
+
+
+
+
+
 // @import '_fonts';
 // @import '_default';
 // @import '_header';
