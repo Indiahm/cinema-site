@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title><?= $title; ?> | Movies</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
+
 <body>
 	<header>
 		<nav class="navbar navbar-expand-lg bg-primary mb-4" data-bs-theme="dark">
@@ -17,10 +19,14 @@
 				<div class="collapse navbar-collapse" id="navbarText">
 					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 						<li class="nav-item">
-							<a class="nav-link" href="#">Movies</a>
+							<a class="nav-link" href="#"></a>
+							<a href="<?= $router->generate('listMovies'); ?>" class="btn btn-succes">Movies</a>
+
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="#">Utilisateurs</a>
+							<a class="nav-link" href="#"></a>
+							<a href="<?= $router->generate('users'); ?>" class="btn btn-succes">Utilisateurs</a>
+
 						</li>
 					</ul>
 					<div class="navbar-text">

@@ -15,7 +15,7 @@
         <?php foreach ($users as $user) { ?>
             <tr>
                 <td class="align-middle"><?= $user->email; ?></td>
-                <td class="text-center align-middle"><?=htmlentities($user->pseudo);?></td>
+                <td class="text-center align-middle">
                     <a href="<?= $router->generate('editUser', ['id' =>  $user->id]); ?>">Editer</a>
                     <a href="<?= $router->generate('deleteUser', ['id' =>  $user->id]); ?>">Supprimer</a>
                 </td>
@@ -25,3 +25,7 @@
 </table>
 
 <?php get_footer('admin'); ?>
+
+
+
+

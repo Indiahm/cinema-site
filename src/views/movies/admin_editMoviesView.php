@@ -1,32 +1,30 @@
 <?php get_header('edit', 'admin'); ?>
 
 <body>
-    
-    <form action="" method="post" novalidate>
 
-        <div class="container">
-        <h2>Ajouter un nouveau film</h2>
-        <form action="ajouter_film.php" method="post">
+
+    <div class="container">
+        <form action="" method="post">
+
+            <h1>Ajouter un nouveau film</h1>
             <label for="nomFilm">Nom du film:</label>
-            <input type="text" id="nomFilm" name="nomFilm" required>
+            <input type="text" id="nomFilm" name="title" value="<?= getValue('title'); ?>">
+
 
             <label for="dateSortie">Date de sortie:</label>
-            <input type="date" id="dateSortie" name="dateSortie" required>
+            <input type="date" id="dateSortie" name="releaseDate" value="<?= getValue('releaseDate'); ?>">
 
             <label for="dureeFilm">Durée du film (minutes):</label>
-            <input type="number" id="dureeFilm" name="dureeFilm" required>
+            <input type="number" id="dureeFilm" name="duration" value="<?= getValue('duration'); ?>">
 
             <label for="dureeFilm">Casting:</label>
-            <input type="text" id="castingFilm" name="castingFilm" required>
+            <input type="text" id="castingFilm" name="casting" value="<?= getValue('casting'); ?>">
 
-            <label for="notePresse">Note de la presse:</label>
-            <input type="number" id="notePresse" name="notePresse" step="0.1" min="0" max="10" required>
+            <label for="notePress">Note de la presse:</label>
+            <input type="number" id="notePress" name="notePress" value="<?= getValue('notePress'); ?>">
 
-            <label for="description">Description:</label>
-            <textarea id="description" name="description" rows="4" required></textarea>
-
-            <label for="lienYoutube">Bande annonce YouTube:</label>
-            <input type="url" id="lienYoutube" name="lienYoutube" placeholder="https://www.youtube.com/watch?v=" required>
+            <label for="description">synopsis:</label>
+            <textarea id="description" name="synopsis" value="<?= getValue('synopsis'); ?>"></textarea>
 
             <input type="submit" value="Ajouter le film">
         </form>

@@ -71,7 +71,7 @@ function logoutTimer ()
     global $router;
 
     if (!empty($_SESSION['user']['lastLogin'])) {
-        $expireHour = 1;
+        $expireHour = 500;
 
         $now = new DateTime();
         $now->setTimezone(new DateTimeZone('Europe/Paris'));

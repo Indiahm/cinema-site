@@ -1,27 +1,26 @@
 <?php get_header('Liste des films', 'admin'); ?>
+<!-- admin = layout -->
 
 <h2>Liste des films</h2>
 
-<a href="<?= $router->generate('listMovies'); ?>" class="btn btn-success">Ajouter un nouveau film</a>
+<a href="<?= $router->generate('addMovie'); ?>" class="btn btn-success">Ajouter un nouveau film</a>
 
 <table class="table table-striped table-hover">
     <thead>
         <tr>
-            <th scope="col">Titre</th>
-            <th scope="col">Release date</th>
-            <th scope="col">Duration</th>
-            <th scope="col">Synopsis</th>
-            <th scope="col">Casting</th>
-            <th scope="col">Note presse</th>
-        </tr>""
+            <th scope="col">Titre du film</th>
+            <th scope="col">Modifier/supprimer</th>
     </thead>
     <tbody>
+
         <?php foreach ($movies as $movie) { ?>
             <tr>
-                <td class="align-middle"><?= $user->email; ?></td>
-                <td class="text-center align-middle">
-                    <a href="<?= $router->generate('editUser', ['id' =>  $user->id]); ?>">Editer</a>
-                    <a href="<?= $router->generate('deleteUser', ['id' =>  $user->id]); ?>">Supprimer</a>
+                <td class="align-middle"><?= $movie['title']; ?>
+</td>
+        
+                <td class="align-middle">
+                    <a href="<?= $router->generate('editMovie', ['id' => $movie['id']]); ?>" class="btn btn-primary">Editer</a>
+                    <a href="<?= $router->generate('deleteMovie', ['id' => $movie['id']]); ?>" class="btn btn-danger">Supprimer</a>
                 </td>
             </tr>
         <?php } ?>
