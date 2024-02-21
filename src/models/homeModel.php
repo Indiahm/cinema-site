@@ -1,21 +1,13 @@
 <?php
 
-// function getAllUsers ($db) {
-// 	$sql = "SELECT * FROM users";
-// 	$request = $db->prepare($sql);
-// 	$request->execute();
-
-// 	return $request->fetchAll();
-// }
-
-
-
-function getMovies()
+function listMovies()
 {
     global $db;
-    $sql = 'SELECT slug, title, poster FROM movies ORDER BY created DESC';
+    $sql = 'SELECT id, poster, title, releaseDate FROM movies';
     $query = $db->prepare($sql);
     $query->execute();
 
     return $query->fetchAll();
 }
+
+?>
